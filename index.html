@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vilomix App</title>
+    <meta charset="UTF-8">
+    <title>ViloApp</title>
+    <link rel="icon" href="vilomix-leaf.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background: #f0f0f0;
+            color: #222;
+        }
+        header {
+            background: #ffffff;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        header img {
+            height: 60px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .menu-item {
+            background: white;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #000;
+        }
+        .menu-item:hover {
+            background: #eef;
+        }
+        .menu-item img {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+        .dark-mode {
+            background: #222;
+            color: #eee;
+        }
+        .dark-mode .menu-item {
+            background: #333;
+            color: #eee;
+        }
+    </style>
 </head>
 <body>
-  <h1>ViloApp</h1>
-  <ul>
-    <li><a href="farmlist.html">Farmlist</a></li>
-    <li><a href="solicitacao.html">Solicitação</a></li>
-    <li><a href="pedidos.html">Pedidos</a></li>
-    <li><a href="amostras.html">Amostras & Análises</a></li>
-    <li><a href="resultados.html">Resultados Vilomix</a></li>
-  </ul>
+    <header>
+        <img src="vilomix-logo.svg" alt="Vilomix Logo">
+    </header>
+    <div class="container">
+        <a class="menu-item" href="farmlist.html"><img src='check.svg' alt='' style='width:24px;height:24px;'> Farmlist</a>
+        <a class="menu-item" href="https://forms.office.com/solicitacao"><img src='envelope.svg' alt='' style='width:24px;height:24px;'> Solicitação</a>
+        <a class="menu-item" href="https://forms.office.com/pedidos"><img src='cart.svg' alt='' style='width:24px;height:24px;'> Pedidos</a>
+        <a class="menu-item" href="https://forms.office.com/amostras"><img src='microscope.svg' alt='' style='width:24px;height:24px;'> Amostras & Análises</a>
+        <a class="menu-item" href="https://forms.office.com/resultados"><img src='chart.svg' alt='' style='width:24px;height:24px;'> Resultados Vilomix</a>
+        <button onclick="toggleDark()">🌙 Alternar Tema</button>
+    </div>
+    <script>
+        function toggleDark() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
